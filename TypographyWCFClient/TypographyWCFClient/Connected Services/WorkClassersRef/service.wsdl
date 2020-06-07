@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WorkClasses" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Typography_WCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClasses_GetChatMessagesOfOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatMessagesOfOrder" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_GetChatMessagesOfOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatMessagesOfOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getCurrentUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrentUser" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getCurrentUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrentUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getOrdersOfCurrentUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersOfCurrentUser" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getOrdersOfCurrentUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersOfCurrentUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_changePwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:changePwd" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_changePwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changePwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_addChatMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:addChatMessage" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_addChatMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addChatMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_addOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOrder" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_addOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getOrdersByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersByDate" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getOrdersByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_auth_InputMessage">
+    <wsdl:part name="parameters" element="tns:auth" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_auth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:authResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:logout" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSales" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:getServices" />
+  </wsdl:message>
+  <wsdl:message name="IClasses_getServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getServicesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClasses">
+    <wsdl:operation name="GetChatMessagesOfOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/GetChatMessagesOfOrder" message="tns:IClasses_GetChatMessagesOfOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/GetChatMessagesOfOrderResponse" message="tns:IClasses_GetChatMessagesOfOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/getCurrentUser" message="tns:IClasses_getCurrentUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/getCurrentUserResponse" message="tns:IClasses_getCurrentUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersOfCurrentUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/getOrdersOfCurrentUser" message="tns:IClasses_getOrdersOfCurrentUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/getOrdersOfCurrentUserResponse" message="tns:IClasses_getOrdersOfCurrentUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/changePwd" message="tns:IClasses_changePwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/changePwdResponse" message="tns:IClasses_changePwd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addChatMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/addChatMessage" message="tns:IClasses_addChatMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/addChatMessageResponse" message="tns:IClasses_addChatMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/addOrder" message="tns:IClasses_addOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/addOrderResponse" message="tns:IClasses_addOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/getOrdersByDate" message="tns:IClasses_getOrdersByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/getOrdersByDateResponse" message="tns:IClasses_getOrdersByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="auth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/auth" message="tns:IClasses_auth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/authResponse" message="tns:IClasses_auth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/logout" message="tns:IClasses_logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/logoutResponse" message="tns:IClasses_logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/getSales" message="tns:IClasses_getSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/getSalesResponse" message="tns:IClasses_getSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClasses/getServices" message="tns:IClasses_getServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClasses/getServicesResponse" message="tns:IClasses_getServices_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClasses" type="tns:IClasses">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetChatMessagesOfOrder">
+      <soap:operation soapAction="http://tempuri.org/IClasses/GetChatMessagesOfOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentUser">
+      <soap:operation soapAction="http://tempuri.org/IClasses/getCurrentUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersOfCurrentUser">
+      <soap:operation soapAction="http://tempuri.org/IClasses/getOrdersOfCurrentUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <soap:operation soapAction="http://tempuri.org/IClasses/changePwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addChatMessage">
+      <soap:operation soapAction="http://tempuri.org/IClasses/addChatMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOrder">
+      <soap:operation soapAction="http://tempuri.org/IClasses/addOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersByDate">
+      <soap:operation soapAction="http://tempuri.org/IClasses/getOrdersByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auth">
+      <soap:operation soapAction="http://tempuri.org/IClasses/auth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="http://tempuri.org/IClasses/logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSales">
+      <soap:operation soapAction="http://tempuri.org/IClasses/getSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServices">
+      <soap:operation soapAction="http://tempuri.org/IClasses/getServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkClasses">
+    <wsdl:port name="BasicHttpBinding_IClasses" binding="tns:BasicHttpBinding_IClasses">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Typography_WCF/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
