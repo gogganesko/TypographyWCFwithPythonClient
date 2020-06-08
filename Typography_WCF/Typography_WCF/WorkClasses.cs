@@ -184,9 +184,24 @@ namespace Typography_WCF
             return isLoggedOut;
         }
 
+
         private bool checkToken(Person user)
         {
-            if (user.token != "")
+            string token = "";
+            DateTime tokenDate = new DateTime();
+            using (SQLiteConnection Connect = new SQLiteConnection(@"Data Source=Typography.db; Version=3"))
+            {
+                string sql = String.Format(@"Select * From Persons where Persons.id = ""{0}""", user.id);
+                Connect.Open(); // открыть соединение
+                SQLiteCommand command = new SQLiteCommand(sql, Connect);
+                SQLiteDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    token = Convert.ToString(reader["Token"]);
+                    tokenDate = Convert.ToDateTime(reader["TokenDate"]);
+                }
+            }
+            if (user.token == token && user.tokenDate == tokenDate)
             {
                 return true;
             }
